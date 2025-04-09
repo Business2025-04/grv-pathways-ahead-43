@@ -7,11 +7,21 @@ interface CourseCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
+  image?: string;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, image }) => {
   return (
-    <Card className="card-hover">
+    <Card className="card-hover overflow-hidden">
+      {image && (
+        <div className="w-full h-40 overflow-hidden">
+          <img 
+            src={image} 
+            alt={`${title} course`} 
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      )}
       <CardContent className="p-6">
         <div className="w-14 h-14 bg-grv-blue-light bg-opacity-20 rounded-lg flex items-center justify-center text-grv-blue mb-4">
           {icon}

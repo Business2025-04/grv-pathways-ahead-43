@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     name: 'Priya Sharma',
     role: 'BBA Graduate',
     quote: 'GRV guided me to the perfect college for my BBA. Their counseling was personalized and they made the admission process smooth!',
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     type: 'student'
   },
   {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     name: 'Rahul Patel',
     role: 'MBA Student',
     quote: 'I was confused about which MBA specialization to choose. The career counselors at GRV provided clarity and helped me secure admission to a top college.',
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     type: 'student'
   },
   {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     name: 'Dr. Aisha Khan',
     role: 'Admissions Director, Excel Business School',
     quote: 'Our partnership with GRV has been extremely beneficial. They send us students who are well-matched to our programs, resulting in better retention rates.',
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     type: 'college'
   },
   {
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     name: 'Vikram Mehta',
     role: 'BCA Student',
     quote: 'The documentation support from GRV was incredible. They handled everything from application forms to scholarship paperwork, allowing me to focus on my studies.',
-    image: '/placeholder.svg',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
     type: 'student'
   }
 ];
