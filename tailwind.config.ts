@@ -53,17 +53,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom GRV colors
+				// Custom theme colors
 				grv: {
-					blue: {
-						light: '#64B5F6',
-						DEFAULT: '#1E88E5',
-						dark: '#1565C0'
+					cyan: {
+						light: '#6FF6EA',
+						DEFAULT: '#2FF3E0',
+						dark: '#21C4B3'
 					},
-					green: {
-						light: '#A5D6A7',
-						DEFAULT: '#4CAF50', 
-						dark: '#2E7D32'
+					gold: {
+						light: '#FAE06B',
+						DEFAULT: '#F8D210',
+						dark: '#D4B60C'
+					},
+					pink: {
+						light: '#FC70BE',
+						DEFAULT: '#FA26A0',
+						dark: '#CE1B81'
+					},
+					red: {
+						light: '#F7595F',
+						DEFAULT: '#F51720',
+						dark: '#C41219'
 					}
 				}
 			},

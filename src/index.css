@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 210 100% 98%;
-    --foreground: 210 20% 20%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 20%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 20%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 210 80% 50%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 174 91% 57%;
+    --primary-foreground: 0 0% 15%;
 
-    --secondary: 120 30% 50%;
-    --secondary-foreground: 120 20% 98%;
+    --secondary: 49 94% 52%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 210 10% 90%;
-    --muted-foreground: 210 10% 40%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 10% 95%;
-    --accent-foreground: 210 80% 50%;
+    --accent: 327 96% 57%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 358 91% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 80% 50%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 174 91% 57%;
 
     --radius: 0.5rem;
   }
@@ -80,11 +80,19 @@
   }
   
   .btn-primary {
-    @apply bg-grv-blue text-white px-6 py-3 rounded-md font-medium hover:bg-grv-blue-dark transition-colors;
+    @apply bg-grv-cyan text-foreground px-6 py-3 rounded-md font-medium hover:bg-grv-cyan-dark transition-colors;
   }
   
   .btn-secondary {
-    @apply bg-grv-green text-white px-6 py-3 rounded-md font-medium hover:bg-grv-green-dark transition-colors;
+    @apply bg-grv-gold text-foreground px-6 py-3 rounded-md font-medium hover:bg-grv-gold-dark transition-colors;
+  }
+  
+  .btn-accent {
+    @apply bg-grv-pink text-white px-6 py-3 rounded-md font-medium hover:bg-grv-pink-dark transition-colors;
+  }
+  
+  .btn-destructive {
+    @apply bg-grv-red text-white px-6 py-3 rounded-md font-medium hover:bg-grv-red-dark transition-colors;
   }
   
   .card-hover {
