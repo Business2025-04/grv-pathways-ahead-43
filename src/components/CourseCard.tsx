@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -14,7 +15,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, image
   return (
     <Card className="card-hover overflow-hidden">
       {image && (
-        <div className="w-full h-40 overflow-hidden">
+        <div className="w-full h-48 overflow-hidden">
           <img 
             src={image} 
             alt={`${title} course`} 
@@ -28,9 +29,9 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, image
         </div>
         <h3 className="text-xl font-medium mb-2">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        <a href="/colleges" className="inline-flex items-center text-grv-blue hover:text-grv-blue-dark transition-colors font-medium">
+        <Link to="/colleges" className="inline-flex items-center text-grv-blue hover:text-grv-blue-dark transition-colors font-medium">
           Explore Colleges <ArrowRight size={16} className="ml-1" />
-        </a>
+        </Link>
       </CardContent>
     </Card>
   );

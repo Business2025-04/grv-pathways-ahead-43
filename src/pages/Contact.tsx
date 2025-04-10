@@ -204,17 +204,6 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Map */}
-      <section className="py-10">
-        <div className="container-custom">
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <div className="h-[400px] bg-gray-300 flex items-center justify-center">
-              <p className="text-lg">Google Maps Location Placeholder</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">

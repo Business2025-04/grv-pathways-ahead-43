@@ -53,16 +53,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom GRV colors
+				// Custom GRV colors - Updated with more vibrant palette
 				grv: {
 					blue: {
 						light: '#64B5F6',
-						DEFAULT: '#1E88E5',
-						dark: '#1565C0'
+						DEFAULT: '#1976D2', 
+						dark: '#0D47A1'
 					},
 					green: {
-						light: '#A5D6A7',
-						DEFAULT: '#4CAF50', 
+						light: '#81C784',
+						DEFAULT: '#43A047',
 						dark: '#2E7D32'
 					}
 				}

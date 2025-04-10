@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Book, BookOpen, GraduationCap, Building, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
@@ -47,8 +48,8 @@ const Index = () => {
             <p className="text-xl mb-8 text-grv-blue-light animate-slide-up">
               Personalized educational guidance to help you find the right college and build a successful career.
             </p>
-            <Button className="bg-grv-green text-white hover:bg-grv-green-dark px-8 py-6 text-lg rounded-md shadow-lg">
-              Book Free Counseling
+            <Button className="bg-grv-green text-white hover:bg-grv-green-dark px-8 py-6 text-lg rounded-md shadow-lg" asChild>
+              <Link to="/contact">Book Free Counseling</Link>
             </Button>
           </div>
         </div>
@@ -98,7 +99,9 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <Button className="mt-8 bg-grv-blue hover:bg-grv-blue-dark">Learn More About Us</Button>
+              <Button className="mt-8 bg-grv-blue hover:bg-grv-blue-dark" asChild>
+                <Link to="/about">Learn More About Us</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -152,8 +155,8 @@ const Index = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Talk to our expert counselors and get personalized guidance for your education journey. It's completely free!
           </p>
-          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors text-lg px-8 py-6">
-            Book Your Free Counseling Session
+          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors text-lg px-8 py-6" asChild>
+            <Link to="/contact">Book Your Free Counseling Session</Link>
           </Button>
         </div>
       </section>

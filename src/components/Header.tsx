@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -31,7 +31,6 @@ const Header = () => {
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Colleges', path: '/colleges' },
-    { name: 'Testimonials', path: '/testimonials' },
     { name: 'Contact', path: '/contact' },
   ];
   
@@ -44,8 +43,13 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <h1 className="text-2xl font-bold text-grv-blue">GRV</h1>
-          <span className="ml-2 text-sm hidden md:inline-block font-medium">Pathways Ahead</span>
+          <div className="w-10 h-10 bg-grv-blue rounded-md flex items-center justify-center text-white mr-2">
+            <GraduationCap size={24} />
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-grv-blue">GRV</h1>
+            <span className="text-xs text-gray-600 hidden md:inline-block">Pathways Ahead</span>
+          </div>
         </Link>
         
         {/* Desktop Navigation */}
@@ -63,8 +67,8 @@ const Header = () => {
         
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button className="bg-grv-green hover:bg-grv-green-dark">
-            Book Free Counseling
+          <Button className="bg-grv-green hover:bg-grv-green-dark" asChild>
+            <Link to="/contact">Book Free Counseling</Link>
           </Button>
         </div>
         
@@ -87,8 +91,8 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-grv-green hover:bg-grv-green-dark mt-2 w-full">
-              Book Free Counseling
+            <Button className="bg-grv-green hover:bg-grv-green-dark mt-2 w-full" asChild>
+              <Link to="/contact">Book Free Counseling</Link>
             </Button>
           </nav>
         </div>
