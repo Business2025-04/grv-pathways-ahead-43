@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -43,13 +43,11 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <div className="w-10 h-10 bg-grv-blue rounded-md flex items-center justify-center text-white mr-2">
-            <GraduationCap size={24} />
-          </div>
-          <div>
-            <h1 className="text-2xl font-bold text-grv-blue">GRV</h1>
-            <span className="text-xs text-gray-600 hidden md:inline-block">Pathways Ahead</span>
-          </div>
+          <img 
+            src="/lovable-uploads/97fd8286-7d49-41ed-90be-8e357795265c.png" 
+            alt="Grand Royal Vistara Logo" 
+            className="h-12 md:h-14" 
+          />
         </Link>
         
         {/* Desktop Navigation */}

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Search, FileText, PhoneCall, Compass, BookOpen, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -16,7 +17,8 @@ const Services = () => {
         "Insights on campus facilities and environment",
         "Guidance on course curriculum and specializations",
         "Details on faculty expertise and teaching methodology"
-      ]
+      ],
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       icon: <FileText size={36} />,
@@ -28,7 +30,8 @@ const Services = () => {
         "Essay and statement of purpose guidance",
         "Scholarship application support",
         "Portfolio preparation for specific courses"
-      ]
+      ],
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       icon: <PhoneCall size={36} />,
@@ -40,7 +43,8 @@ const Services = () => {
         "Reminders for important dates and deadlines",
         "Assistance with entrance exam preparations",
         "Interview preparation guidance"
-      ]
+      ],
+      image: "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       icon: <Compass size={36} />,
@@ -52,7 +56,8 @@ const Services = () => {
         "Guidance on required skills and certifications",
         "Internship and placement opportunities",
         "Long-term career planning"
-      ]
+      ],
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
@@ -113,7 +118,7 @@ const Services = () => {
                 </div>
                 <div className={`${index % 2 !== 0 ? 'md:order-1' : ''}`}>
                   <img 
-                    src="/placeholder.svg" 
+                    src={service.image} 
                     alt={service.title} 
                     className="rounded-lg shadow-lg w-full h-[300px] object-cover"
                   />
@@ -154,7 +159,9 @@ const Services = () => {
             <p className="text-lg mb-6">
               All our services are customized to meet individual student needs and goals.
             </p>
-            <Button className="bg-grv-blue hover:bg-grv-blue-dark">Schedule a Consultation</Button>
+            <Button className="bg-grv-blue hover:bg-grv-blue-dark" asChild>
+              <Link to="/contact">Schedule a Consultation</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -276,8 +283,8 @@ const Services = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Book a free counseling session with our experts and take the first step toward your dream career.
           </p>
-          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors">
-            Book Free Counseling
+          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors" asChild>
+            <Link to="/contact">Book Free Counseling</Link>
           </Button>
         </div>
       </section>

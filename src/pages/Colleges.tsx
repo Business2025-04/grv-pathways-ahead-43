@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, MapPin, Award, Building, Users, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,7 +25,7 @@ const Colleges = () => {
       state: "Karnataka",
       features: ["Direct Admission", "Low Fees", "Good Placements", "Hostel Available"],
       courses: ["BBA", "MBA", "BCom"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const Colleges = () => {
       state: "Karnataka",
       features: ["Low Fees", "Good Placements", "AICTE Approved"],
       courses: ["BBA", "MBA", "BHM"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const Colleges = () => {
       state: "Maharashtra",
       features: ["Direct Admission", "Good Placements", "Lab Facilities", "Hostel Available"],
       courses: ["BCA", "MCA", "B.Tech"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ const Colleges = () => {
       state: "Maharashtra",
       features: ["Low Fees", "Internship Support", "Good Campus"],
       courses: ["BCom", "MCom", "BBA"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ const Colleges = () => {
       state: "Telangana",
       features: ["Research Facilities", "Good Placements", "Hostel Available", "Scholarships"],
       courses: ["B.Tech", "M.Tech", "BCA", "MCA"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
       id: 6,
@@ -70,7 +70,7 @@ const Colleges = () => {
       state: "Telangana",
       features: ["Creative Studios", "Exhibitions", "Renowned Faculty"],
       courses: ["BFA", "MFA", "Design"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
   ];
 
@@ -184,8 +184,8 @@ const Colleges = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             We have partnerships with many more colleges across India. Contact us to explore more options.
           </p>
-          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors">
-            Contact Our Counselors
+          <Button className="bg-white text-grv-green hover:bg-gray-100 transition-colors" asChild>
+            <Link to="/contact">Contact Our Counselors</Link>
           </Button>
         </div>
       </section>
@@ -237,8 +237,8 @@ const CollegeCard = ({ college }: { college: College }) => {
           </div>
         </div>
         
-        <Button className="w-full mt-4 bg-grv-blue hover:bg-grv-blue-dark">
-          Get Details
+        <Button className="w-full mt-4 bg-grv-blue hover:bg-grv-blue-dark" asChild>
+          <Link to="/contact">Get Details</Link>
         </Button>
       </CardContent>
     </Card>
