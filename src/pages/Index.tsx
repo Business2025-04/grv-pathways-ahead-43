@@ -1,16 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Book, BookOpen, GraduationCap, Building, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import TestimonialCarousel from '@/components/TestimonialCarousel';
 import CourseCard from '@/components/CourseCard';
 import PartnerColleges from '@/components/PartnerColleges';
 
 const Index = () => {
   const courses = [
     {
-      title: "BBA",
+      title: "MBB",
       description: "Bachelor of Business Administration for management career aspirants.",
       icon: <Building size={28} />,
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -128,20 +126,6 @@ const Index = () => {
               />
             ))}
           </div>
-        </div>
-      </section>
-      
-      {/* Testimonial Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What People Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Hear from our students and partner colleges about their experience working with GRV.
-            </p>
-          </div>
-          
-          <TestimonialCarousel />
         </div>
       </section>
       
