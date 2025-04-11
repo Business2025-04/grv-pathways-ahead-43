@@ -1,9 +1,18 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, MapPin, Award, Building, Users, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 interface College {
   id: number;
@@ -16,8 +25,9 @@ interface College {
 }
 
 const Colleges = () => {
-  // Sample data
+  // Sample data with more colleges
   const colleges: College[] = [
+    // Bangalore Colleges
     {
       id: 1,
       name: "Excel Business School",
@@ -38,6 +48,165 @@ const Colleges = () => {
     },
     {
       id: 3,
+      name: "Raja Rajeswari Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Medical Facilities", "Experienced Faculty", "Hostel Available"],
+      courses: ["MBBS", "MD", "MS"],
+      image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 4,
+      name: "BGS & SJP Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Research Facilities", "Modern Labs", "Hostel Available"],
+      courses: ["MBBS", "MD", "MS", "BDS"],
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 5,
+      name: "St. Johns Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Premier Institution", "Hospital Attached", "International Recognition"],
+      courses: ["MBBS", "MD", "MS", "Nursing"],
+      image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 6,
+      name: "Vydehi Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Modern Infrastructure", "Specialization Options", "Hostel Available"],
+      courses: ["MBBS", "MD", "MS", "Allied Health Sciences"],
+      image: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 7,
+      name: "Dr. Ambedkar Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Affordable Fees", "Experienced Faculty", "Good Infrastructure"],
+      courses: ["MBBS", "MD", "MS"],
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 8,
+      name: "M S Ramaiah Medical College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["High-Tech Facilities", "Research Opportunities", "Hospital Training"],
+      courses: ["MBBS", "MD", "MS", "BDS", "MDS"],
+      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 9,
+      name: "Surya Group of Institutions",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Industry Partnerships", "Practical Training", "Campus Placements"],
+      courses: ["BSc", "MSc", "BBA", "MBA"],
+      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 10,
+      name: "Sea College",
+      city: "Bangalore",
+      state: "Karnataka",
+      features: ["Modern Campus", "Experienced Faculty", "Industry Exposure"],
+      courses: ["BCA", "MCA", "BBA", "MBA"],
+      image: "https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    
+    // Mangaluru (Mangalapuram) Colleges
+    {
+      id: 11,
+      name: "AJ Medical College",
+      city: "Mangaluru",
+      state: "Karnataka",
+      features: ["Modern Infrastructure", "Experienced Faculty", "Hospital Training"],
+      courses: ["MBBS", "MD", "MS"],
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 12,
+      name: "Yenepoya Medical College",
+      city: "Mangaluru",
+      state: "Karnataka",
+      features: ["Research Focus", "International Collaborations", "Modern Facilities"],
+      courses: ["MBBS", "MD", "MS", "BDS", "PhD"],
+      image: "https://images.unsplash.com/photo-1464582883107-8adf2dca8a9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 13,
+      name: "KIMS Medical College",
+      city: "Mangaluru",
+      state: "Karnataka",
+      features: ["Established Reputation", "Quality Education", "Hospital Attachment"],
+      courses: ["MBBS", "MD", "MS", "Nursing"],
+      image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 14,
+      name: "Nitte University",
+      city: "Mangaluru",
+      state: "Karnataka",
+      features: ["Multidisciplinary Programs", "Research Opportunities", "International Standards"],
+      courses: ["MBBS", "MD", "MS", "Engineering", "Management"],
+      image: "https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 15,
+      name: "Father Muller Medical College",
+      city: "Mangaluru",
+      state: "Karnataka",
+      features: ["Century-old Legacy", "Value-based Education", "Clinical Exposure"],
+      courses: ["MBBS", "MD", "MS", "Allied Health Sciences"],
+      image: "https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 16,
+      name: "Manipal Academy of Higher Education",
+      city: "Manipal",
+      state: "Karnataka",
+      features: ["Global Recognition", "Research Excellence", "Industry Partnerships"],
+      courses: ["MBBS", "MD", "MS", "Engineering", "Management", "Communication"],
+      image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    
+    // Mysore Colleges
+    {
+      id: 17,
+      name: "JSS Medical College",
+      city: "Mysore",
+      state: "Karnataka",
+      features: ["Quality Education", "Research Focus", "Modern Facilities"],
+      courses: ["MBBS", "MD", "MS", "BDS"],
+      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 18,
+      name: "AIMS Medical College",
+      city: "Mysore",
+      state: "Karnataka",
+      features: ["Practical Training", "Affordable Fees", "Experienced Faculty"],
+      courses: ["MBBS", "BDS", "Nursing", "Physiotherapy"],
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    {
+      id: 19,
+      name: "BGS Apollo Medical College",
+      city: "Mysore",
+      state: "Karnataka",
+      features: ["Industry Collaboration", "Modern Infrastructure", "Hospital Training"],
+      courses: ["MBBS", "MD", "MS", "Allied Health Sciences"],
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    },
+    
+    // Pune and Hyderabad colleges from the original list
+    {
+      id: 20,
       name: "Global Technology Institute",
       city: "Pune",
       state: "Maharashtra",
@@ -46,7 +215,7 @@ const Colleges = () => {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
-      id: 4,
+      id: 21,
       name: "Heritage College of Commerce",
       city: "Pune",
       state: "Maharashtra",
@@ -55,7 +224,7 @@ const Colleges = () => {
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
-      id: 5,
+      id: 22,
       name: "Innovative Science University",
       city: "Hyderabad",
       state: "Telangana",
@@ -64,7 +233,7 @@ const Colleges = () => {
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
-      id: 6,
+      id: 23,
       name: "Central Institute of Arts",
       city: "Hyderabad",
       state: "Telangana",
@@ -76,7 +245,9 @@ const Colleges = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTab, setActiveTab] = useState("all");
-  const cities = ["Bangalore", "Pune", "Hyderabad"];
+  
+  // Get unique cities from the colleges array
+  const cities = Array.from(new Set(colleges.map(college => college.city)));
   
   // Filter colleges based on search term and active tab
   const filteredColleges = colleges.filter((college) => {
@@ -127,9 +298,9 @@ const Colleges = () => {
             </div>
             
             <Tabs defaultValue="all" className="w-full md:w-auto" onValueChange={setActiveTab}>
-              <TabsList className="grid grid-cols-4 w-full md:w-auto min-w-[400px]">
+              <TabsList className="grid grid-cols-5 w-full md:w-auto min-w-[500px]">
                 <TabsTrigger value="all">All Cities</TabsTrigger>
-                {cities.map((city) => (
+                {cities.slice(0, 4).map((city) => (
                   <TabsTrigger key={city} value={city.toLowerCase()}>{city}</TabsTrigger>
                 ))}
               </TabsList>
@@ -174,6 +345,46 @@ const Colleges = () => {
               </Button>
             </div>
           )}
+        </div>
+      </section>
+      
+      {/* College Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold mb-10 text-center">Colleges by Location</h2>
+          
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>City</TableHead>
+                <TableHead>Number of Colleges</TableHead>
+                <TableHead>Popular Courses</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {Object.keys(collegesByCity).map((city) => {
+                // Get all courses from colleges in this city
+                const allCourses = collegesByCity[city].flatMap(college => college.courses);
+                // Count occurrences of each course
+                const courseCounts: Record<string, number> = {};
+                allCourses.forEach(course => {
+                  courseCounts[course] = (courseCounts[course] || 0) + 1;
+                });
+                // Sort courses by frequency
+                const popularCourses = Object.keys(courseCounts)
+                  .sort((a, b) => courseCounts[b] - courseCounts[a])
+                  .slice(0, 3);
+                
+                return (
+                  <TableRow key={city}>
+                    <TableCell className="font-medium">{city}</TableCell>
+                    <TableCell>{collegesByCity[city].length}</TableCell>
+                    <TableCell>{popularCourses.join(", ")}</TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
         </div>
       </section>
       
