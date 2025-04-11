@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Book, BookOpen, GraduationCap, Building, Users } from 'lucide-react';
+import { Book, BookOpen, GraduationCap, Building, Users, Medicine, Nursing } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CourseCard from '@/components/CourseCard';
 import PartnerColleges from '@/components/PartnerColleges';
@@ -8,9 +9,9 @@ import PartnerColleges from '@/components/PartnerColleges';
 const Index = () => {
   const courses = [
     {
-      title: "MBB",
-      description: "Bachelor of Business Administration for management career aspirants.",
-      icon: <Building size={28} />,
+      title: "MBBS",
+      description: "Bachelor of Medicine and Bachelor of Surgery for aspiring doctors.",
+      icon: <Medicine size={28} />,
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -20,9 +21,9 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "BCom",
-      description: "Bachelor of Commerce for accounting and finance professionals.",
-      icon: <Book size={28} />,
+      title: "BSc Nursing",
+      description: "Bachelor of Science in Nursing for healthcare professionals.",
+      icon: <Nursing size={28} />,
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
