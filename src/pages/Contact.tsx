@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -28,7 +27,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Submit form data to Supabase
       const { error } = await supabase
         .from('contact_messages')
         .insert([formData]);
@@ -45,7 +43,6 @@ const Contact = () => {
           title: "Message Sent!",
           description: "We'll get back to you as soon as possible.",
         });
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -67,7 +64,6 @@ const Contact = () => {
 
   return (
     <div className="pt-20">
-      {/* Hero Banner */}
       <section className="bg-grv-blue py-20 text-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -77,11 +73,9 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* Contact Information and Form */}
       <section className="py-16">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
               <p className="text-lg text-gray-700 mb-8">
@@ -96,8 +90,8 @@ const Contact = () => {
                     </div>
                     <div className="ml-4">
                       <h3 className="font-medium text-lg mb-1">Call Us</h3>
-                      <p className="text-gray-700">+91 9876543210</p>
-                      <p className="text-gray-700">+91 9876543211</p>
+                      <p className="text-gray-700">+91 9074565694</p>
+                      <p className="text-gray-700">+91 9188357614</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -109,8 +103,7 @@ const Contact = () => {
                     </div>
                     <div className="ml-4">
                       <h3 className="font-medium text-lg mb-1">Email Us</h3>
-                      <p className="text-gray-700">info@grvpathways.com</p>
-                      <p className="text-gray-700">support@grvpathways.com</p>
+                      <p className="text-gray-700">grandroyalvistara3@gmail.com</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -139,7 +132,6 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Contact Form */}
             <div>
               <Card className="shadow-lg">
                 <CardContent className="p-8">
@@ -227,7 +219,6 @@ const Contact = () => {
         </div>
       </section>
       
-      {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
