@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, CheckCircle, Users, BookOpen, TrendingUp, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -41,7 +40,7 @@ const About = () => {
     <div className="pt-20">
       {/* Hero Banner */}
       <section className="bg-grv-blue py-20 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About GRV Pathways Ahead</h1>
           <p className="text-xl max-w-3xl mx-auto">
@@ -68,7 +67,7 @@ const About = () => {
             </div>
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-grv-green-light rounded-lg z-0"></div>
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="GRV Mission" className="rounded-lg shadow-lg relative z-10 w-full" />
+              <img src="https://images.unsplash.com/photo-1517486430290-35657bdcef51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="GRV Mission" className="rounded-lg shadow-lg relative z-10 w-full" />
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-grv-blue-light rounded-lg z-0"></div>
             </div>
           </div>
@@ -145,7 +144,7 @@ const About = () => {
                 </ul>
                 <Button className="mt-8 bg-grv-green hover:bg-grv-green-dark">Contact Us Today</Button>
               </div>
-              <div className="bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center min-h-[400px]"></div>
+              <div className="bg-[url('https://images.unsplash.com/photo-1517486430290-35657bdcef51?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center min-h-[400px]"></div>
             </div>
           </div>
         </div>
