@@ -1,17 +1,16 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const PartnerColleges = () => {
   const partners = [
-    "Excel Business School", 
-    "Global Technology Institute",
-    "Heritage College of Commerce",
-    "Summit Management Academy",
-    "Innovative Science University",
-    "Central Institute of Arts",
-    "Horizon Professional College",
-    "Premier Medical Institute"
+    "Apollo Medical College",
+    "AIMS Medical College",
+    "Sea College",
+    "KIMS Medical College",
+    "Manipal University",
+    "AJ Medical College",
+    "Mangalore Nursing College",
+    "Sreenivas Medical College"
   ];
 
   return (
